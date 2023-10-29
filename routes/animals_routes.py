@@ -2,6 +2,7 @@ from fastapi import APIRouter
 from config.db import client
 from schemas.animals_schemas import animalEntity, animalsEntity
 from models.animal_model import Animal
+from bson import ObjectId
 
 
 animal = APIRouter()
@@ -19,3 +20,10 @@ def create_animal(animal: Animal):
     animal = client.catalogo_animales.animales.find_one({"_id": id})
     return animalEntity(animal)
 
+@animal.patch('/animals/{animalID}')
+def update_animal(update_data: dict, animalID: str):
+    #updateAnimal = dict(animal)
+    #animal = client.catalogo_animales.animales.find_one_and_update({"_id": id},{"$set": updateAnimal})
+    #del new_animal["id"]
+    animalEdited = client.catalogo_animales.animales.find_one_and_update({"_id": ObjectId(animalID)},{"$set": update_data})
+    return animalEntity(animalEdited)

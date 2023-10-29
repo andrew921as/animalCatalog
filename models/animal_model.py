@@ -9,6 +9,6 @@ class Animal(BaseModel):
     Motivo_ingreso:str
     Edad:int
     Fecha_Ingreso:datetime
-    Fecha_salida:datetime
+    Fecha_salida:Optional[datetime] = None
     Observacion:str
     Estado:str

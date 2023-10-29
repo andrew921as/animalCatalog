@@ -1,0 +1,25 @@
+### Traer a todos los animales
+GET http://localhost:8000/animals
+
+### Crear un animal
+POST http://localhost:8000/animals
+Content-Type: application/json
+
+{
+	"Tipo": "Burro",
+	"Talla": "Grande",
+	"Motivo_ingreso": "Maltrato",
+	"Edad": 6,
+	"Fecha_Ingreso": "2023-10-29T14:32:00.123000",
+	"Observacion": "Patea duro",
+	"Estado": "Enfermo"
+}
+
+###Actualizar un animal
+PATCH  http://localhost:8000/animals/652ad177c9934b0e26f6b018
+Content-Type: application/json
+
+{
+    "Observacion": "Volvio a gustarle el pollo de repente"
+}
+
