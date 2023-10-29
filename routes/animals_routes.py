@@ -10,7 +10,6 @@ animal = APIRouter()
 @animal.get('/animals')
 def read_root():
     return animalsEntity(client.catalogo_animales.animales.find())
-
     
 @animal.post('/animals')
 def create_animal(animal: Animal):

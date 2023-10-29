@@ -20,6 +20,6 @@ PATCH  http://localhost:8000/animals/652ad177c9934b0e26f6b018
 Content-Type: application/json
 
 {
-    "Observacion": "Volvio a gustarle el pollo de repente"
+    "Observacion": "Le gusta el pollo y el cerdo"
 }
 
