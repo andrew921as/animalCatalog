@@ -49,3 +49,9 @@ def update_animal(update_data: dict, animalID: str):
     #del new_animal["id"]
     animalEdited = client.catalogo_animales.animales.find_one_and_update({"_id": ObjectId(animalID)},{"$set": update_data})
     return animalEntity(animalEdited)
+
+# RUTA PARA OPTENER UN ANIMAL POR SU ID
+@animal.get('/animals/{animalID}')
+def get_animal(animalID: str):
+    animal = client.catalogo_animales.animales.find_one({"_id": ObjectId(animalID)})
+    return animalEntity(animal)
