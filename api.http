@@ -6,13 +6,15 @@ POST http://localhost:8000/animals
 Content-Type: application/json
 
 {
-	"Tipo": "Burro",
-	"Talla": "Grande",
-	"Motivo_ingreso": "Maltrato",
-	"Edad": 6,
+	"Nombre": "Paco",
+	"Tipo": "Cocodrilo",
+	"Talla": "Enorme",
+	"Motivo_ingreso": "Digestion",
+	"Edad": 2,
 	"Fecha_Ingreso": "2023-10-29T14:32:00.123000",
-	"Observacion": "Patea duro",
-	"Estado": "Enfermo"
+	"Observacion": "Es ojizarco",
+	"Estado": "Ok",
+	"Image":"link"
 }
 
 ###Actualizar un animal
