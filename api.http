@@ -6,9 +6,9 @@ POST http://localhost:8000/animals
 Content-Type: application/json
 
 {
-	"Nombre": "Paco",
-	"Tipo": "Cocodrilo",
-	"Talla": "Enorme",
+	"Nombre": "Santiago",
+	"Tipo": "Sapo",
+	"Talla": "P",
 	"Motivo_ingreso": "Digestion",
 	"Edad": 2,
 	"Fecha_Ingreso": "2023-10-29T14:32:00.123000",
